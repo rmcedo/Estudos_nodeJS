@@ -4,6 +4,45 @@ const sequelize = new Sequelize('testes','root','Mysql123@',{
     dialect:"mysql"
 })
 
+
+const Postagem = sequelize.define('postagens', {
+    titulo:{
+        type: Sequelize.STRING 
+        //Ao chamar o Sequelize, e identificando como STRING, estou definindo que o 'título' será do tipo VARCHAR
+    },
+    conteudo:{
+        type: Sequelize.TEXT
+    }
+})
+
+Postagem.create({
+    titulo: "Um titulo qualquer",
+    conteudo: "Um conteudo qualquer"
+
+})
+const Usuario = sequelize.define('usuarios', {
+    nome: {
+        type: Sequelize.STRING
+    },
+    sobrenome:{
+        type: Sequelize.STRING
+    },
+    idade:{
+        type: Sequelize.INTEGER
+    },
+    email:{
+        type:Sequelize.STRING
+    }
+})
+
+// Usuario.sync({force: true})
+// Postagem.sync({force: true}) 
+// 'sync' para gerar o model dentro do SQL.
+// force: true é para garantir que ocorra a criação da tabela
+// RECOMENDADO COMENTAR O 'SYNC' ASSIM QUE EXECUTAR PARA QUE NÃO CRIE NOVAMENTE.
+// RECOMENDADO PARAR O SERVIDOR PARA CRIAÇÃO DE TABELAS
+
+
 sequelize.authenticate().then(function() {
     console.log("Conectado com Sucesso!");
     
