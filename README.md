@@ -39,4 +39,10 @@ Repositório destinado para estudos da linguagem nodeJS
 
         npm install --save mysql2
 
+* Para a instalação do Handlebars, um template engine, que dá muitas funcionalidades dentro do HTML. Conseguimos apresentar dados do backend lá no HTML
+
+> Utilizamos o seguinte código dentro do terminal
+
+     npm instal --save express-handlebars
+
 
