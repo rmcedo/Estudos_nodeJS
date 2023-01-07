@@ -46,3 +46,12 @@ Repositório destinado para estudos da linguagem nodeJS
      npm instal --save express-handlebars
 
 
+* Para a instalação do Body Parser, para que consigamos pegar dados de formulários:
+
+> Utilizamos o seguinte código dentro do terminal
+
+     npm install --save body-parser
+
+
+
+
