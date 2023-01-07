@@ -18,7 +18,8 @@ const Sequelize = require('sequelize')
 //Rotas
 
 app.get('/cad', function(req,res){
-    res.send('Rota de Cadastro de Posts')
+    res.render('formulario')
+    //res.render -> Para que o Express renderize o formulario que está dentro do folder 'Views'
 })
 
 
